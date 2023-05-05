@@ -1,14 +1,16 @@
 ---
-title: Manuscript Title
+title: Machine Learning of Biomedical Text for Gene Network Knowledge
 keywords:
 - markdown
 - publishing
 - manubot
 lang: en-US
-date-meta: '2023-05-05'
+date-meta: '2023-02-01'
 author-meta:
-- John Doe
-- Jane Roe
+- Mary Markart
+- Austin Fong
+- Tue Doe
+- Thinh Huynh
 header-includes: |
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
@@ -16,38 +18,38 @@ header-includes: |
   -->
   <meta name="dc.format" content="text/html" />
   <meta property="og:type" content="article" />
-  <meta name="dc.title" content="Manuscript Title" />
-  <meta name="citation_title" content="Manuscript Title" />
-  <meta property="og:title" content="Manuscript Title" />
-  <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2023-05-05" />
-  <meta name="citation_publication_date" content="2023-05-05" />
-  <meta property="article:published_time" content="2023-05-05" />
-  <meta name="dc.modified" content="2023-05-05T19:05:58+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:05:58+00:00" />
+  <meta name="dc.title" content="Machine Learning of Biomedical Text for Gene Network Knowledge" />
+  <meta name="citation_title" content="Machine Learning of Biomedical Text for Gene Network Knowledge" />
+  <meta property="og:title" content="Machine Learning of Biomedical Text for Gene Network Knowledge" />
+  <meta property="twitter:title" content="Machine Learning of Biomedical Text for Gene Network Knowledge" />
+  <meta name="dc.date" content="2023-02-01" />
+  <meta name="citation_publication_date" content="2023-02-01" />
+  <meta property="article:published_time" content="2023-02-01" />
+  <meta name="dc.modified" content="2023-05-05T19:22:53+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T19:22:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="John Doe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
-  <meta name="twitter:creator" content="@johndoe" />
-  <meta name="citation_author" content="Jane Roe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Mary Markart" />
+  <meta name="citation_author_institution" content="Charles W. Davidson College of Engineering, San Jose State University" />
+  <meta name="citation_author" content="Austin Fong" />
+  <meta name="citation_author_institution" content="Charles W. Davidson College of Engineering, San Jose State University" />
+  <meta name="citation_author" content="Tue Doe" />
+  <meta name="citation_author_institution" content="Charles W. Davidson College of Engineering, San Jose State University" />
+  <meta name="citation_author" content="Thinh Huynh" />
+  <meta name="citation_author_institution" content="Charles W. Davidson College of Engineering, San Jose State University" />
   <link rel="canonical" href="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta property="og:url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta property="twitter:url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/7f048a0153f7297fdd470c6e94de573886523348/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/7f048a0153f7297fdd470c6e94de573886523348/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/7f048a0153f7297fdd470c6e94de573886523348/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,84 +71,82 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/7f048a0153f7297fdd470c6e94de573886523348/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@7f048a0](https://github.com/carlosrojas/genome_graph_paper/tree/7f048a0153f7297fdd470c6e94de573886523348)
+from [carlosrojas/genome_graph_paper@f1339ce](https://github.com/carlosrojas/genome_graph_paper/tree/f1339ceb3f19709718ab9d19e6bba785476a26c1)
 on May 5, 2023.
 </em></small>
 
+Published: February 1, 2023
 
 
 # [Machine Learning of Biomedical Text for Gene Network Knowledge]{.center}{.page_break_before}
 
-[A project Report
+[A project Report]{.center}
+[Presented to]{.center}
+[The Faculty of Computer Engineering Department]{.center}
+[San Jose State University]{.center}
 
-Presented to
-
-The Faculty of Computer Engineering Department]{.center}
-
-[San Jose State University
-
-In Partial Fulfillment
-
-Of the Requirements for the Degree
-
-Bachelor of Science in Software Engineering]{.center}
+[In Partial Fulfillment]{.center}
+[Of the Requirements for the Degree]{.center}
+[Bachelor of Science in Software Engineering]{.center}
 
 
-[By
+[By]{.center}
+[Tue Do]{.center}
+[Ausin Fong]{.center}
+[Thinh Huynh]{.center}
+[Mary Markart]{.center}
+[02/2023]{.center}
 
-Tue Do
-
-Ausin Fong
-
-Thinh Huynh
-
-Mary Markart
-
-02/2023].{.center}
-
-
-[Copyright © 2023
-
-Tue Do, Austing Fong, Thinh Huynh, Mary Markart]{.center}
+[Copyright © 2023]{.center}
+[Tue Do, Austing Fong, Thinh Huynh, Mary Markart]{.center}
 
 ## Authors{.page_break_before}
 
 
 
-+ **John Doe**
++ **Mary Markart**
   <br>
-    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [johndoe](https://github.com/johndoe)
-    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [johndoe](https://twitter.com/johndoe)
-    · ![Mastodon icon](images/mastodon.svg){.inline_icon width=16 height=16}
-    [\@johndoe@mastodon.social](https://mastodon.social/@johndoe)
+    [marymarkart](https://github.com/marymarkart)
     <br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
+     Charles W. Davidson College of Engineering, San Jose State University
   </small>
 
-+ **Jane Roe**
-  ^[✉](#correspondence)^<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Austin Fong**
+  <br>
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [janeroe](https://github.com/janeroe)
+    [austinf01](https://github.com/austinf01)
     <br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Charles W. Davidson College of Engineering, San Jose State University
+  </small>
+
++ **Tue Doe**
+  <br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [tuedolm](https://github.com/tuedolm)
+    <br>
+  <small>
+     Charles W. Davidson College of Engineering, San Jose State University
+  </small>
+
++ **Thinh Huynh**
+  ^[✉](#correspondence)^<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [thinhh](https://github.com/thinhh)
+    <br>
+  <small>
+     Charles W. Davidson College of Engineering, San Jose State University
   </small>
 
 
 ::: {#correspondence}
 ✉ — Correspondence possible via [GitHub Issues](https://github.com/carlosrojas/genome_graph_paper/issues)
 or email to
-Jane Roe \<jane.roe@whatever.edu\>.
+Thinh Huynh \<thinh.huynh@sjsu.edu\>.
 
 
 :::
