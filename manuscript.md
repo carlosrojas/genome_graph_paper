@@ -23,8 +23,8 @@ header-includes: |
   <meta name="dc.date" content="2023-05-05" />
   <meta name="citation_publication_date" content="2023-05-05" />
   <meta property="article:published_time" content="2023-05-05" />
-  <meta name="dc.modified" content="2023-05-05T18:42:00+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T18:42:00+00:00" />
+  <meta name="dc.modified" content="2023-05-05T18:55:34+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T18:55:34+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/7e6c0f40ef68f11966cee83f98f3137a33f57b65/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/7e6c0f40ef68f11966cee83f98f3137a33f57b65/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/7e6c0f40ef68f11966cee83f98f3137a33f57b65/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,15 +69,38 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/7e6c0f40ef68f11966cee83f98f3137a33f57b65/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@f3dead1](https://github.com/carlosrojas/genome_graph_paper/tree/f3dead1beff06992c4445d71681ac3726c9dbf79)
+from [carlosrojas/genome_graph_paper@7e6c0f4](https://github.com/carlosrojas/genome_graph_paper/tree/7e6c0f40ef68f11966cee83f98f3137a33f57b65)
 on May 5, 2023.
 </em></small>
 
 
 
-## Authors
+# Machine Learning of Biomedical Text for Gene Network Knowledge{.center}{.page_break_before}
+
+[A project Report
+Presented to
+The Faculty of Computer Engineering Department]{.center}
+
+[San Jose State University
+In Partial Fulfillment
+Of the Requirements for the Degree
+Bachelor of Science in Software Engineering]{.center}
+
+
+[By
+Tue Do
+Ausin Fong
+Thinh Huynh
+Mary Markart
+02/2023].{.center}
+
+
+[Copyright © 2023
+Tue Do, Austing Fong, Thinh Huynh, Mary Markart]{.center}
+
+## Authors{.page_break_before}
 
 
 
@@ -118,7 +141,7 @@ Jane Roe \<jane.roe@whatever.edu\>.
 :::
 
 
-## Abstract {.page_break_before}{.center}
+## Abstract{.page_break_before}{.center}
 
 ### Machine Learning of Biomedical Text for Gene Network Knowledge{.center}
 
