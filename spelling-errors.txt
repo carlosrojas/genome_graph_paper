@@ -23,7 +23,7 @@ Dask
 dataset
 datasets
 dbSNP
-deliverables
+Deliverables
 deserunt
 DGIdb
 differentially
@@ -85,7 +85,7 @@ qui
 quis
 reprehenderit
 reprofiling
-repurposing
+Repurposing
 sed
 sint
 sunt
