@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T19:22:53+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:22:53+00:00" />
+  <meta name="dc.modified" content="2023-05-05T19:23:27+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T19:23:27+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f1339ceb3f19709718ab9d19e6bba785476a26c1/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@f1339ce](https://github.com/carlosrojas/genome_graph_paper/tree/f1339ceb3f19709718ab9d19e6bba785476a26c1)
+from [carlosrojas/genome_graph_paper@d920573](https://github.com/carlosrojas/genome_graph_paper/tree/d9205733926ff93a2df9f1e3ffbaa303b08b47f6)
 on May 5, 2023.
 </em></small>
 
@@ -169,6 +169,49 @@ An issue arises when it takes a long time to find and sift through biomedical re
 Data from text mining biomedical texts was warehoused through the College of Engineering HPC or AWS DynamoDB and AWS Redshift. Data processing utilized BERT and GNormPlus models to categorize and normalize input. TigerGraph was used to represent the knowledge accumulated to visualize relationships. This project reduced the amount of time needed to search through biomedical research by making it easier to discover knowledge about various biological mechanisms using machine learning.
 
 
+
+
+# Chapter 1{.page_break_before}{.center}
+
+
+### 1.1  	Project Goals and Objectives
+The goal of this project was to create a usable gene-to-gene knowledge graph to aid in research within the biomedical field. The application takes an input, which is a gene name, and outputs a knowledge graph surrounding the connections of diseases and topics related to the inputted gene. Project objectives consisted of ranking the relevance of the outputs, only giving related results, and giving a result in a reasonable amount of time. 		
+
+### 1.2  	Problem and Motivation
+Researchers must analyze research papers and draw connections to other papers in the process of conducting research. The finding and analyzing of research papers can be a very time-consuming process. Gene research is also very scattered; there can be multiple diseases related to a single gene and finding all these connections can be very cumbersome. Our project solves both of these problems by decreasing the time for research, as well as creating a visualization to help in understanding gene relationships.
+
+### 1.3  	Project Application and Impact
+Genetic research studies how individual genes or groups of genes affect health and disease. By improving research times and offering more relevant research surrounding the topic of genes, our project will act as a tool for the creation of new technologies or discoveries that will benefit the well-being of society and the prevention and treatment of diseases. 
+
+### 1.4  	Project Results and Deliverables
+Our project's results are a knowledge graph over genes and their relationships. The output is a knowledge graph with a label of their connections to a specific gene, which is entered as an input for the tool. Project deliverables consist of eight deliverables. 
+
+#### Deliverable 1: Research problem understanding and preliminary research
+The research goal is to find the best correlation papers for an input biomedical gene paper for a map of the most correlated papers and their references.
+Preliminary research is currently being conducted in machine learning on text mapping and name entity recognition and biomedical research papers to find similar vocabulary for some pre-mapping for training the model later.
+
+#### Deliverable 2: Collecting data
+Biomedical research papers on gene and abstract data will be collected through PubMed and Gene. These abstract data will be mass-collected and analyzed using pre-trained / predefined models like GNormPlus for gene name recognition.
+
+#### Deliverable 3: Pre-processing data
+The data from Pubmed is formatted in either XML or TXT. This data will be stored in the HPC cluster with additional storage power by AWS. Currently, the project will utilize DynamoDB for noSQL data as the data input could become more diverse ( Redshift for data warehousing )
+This data will be stored and automatically processed using python script with some third-party library besides Pandas.  The data then needs to be pre-processed to become unified xml or json data.
+
+#### Deliverable 4: Name entity recognition and relation extraction
+After preprocessing data, the data will be processed using BioBERT for text mining training on HPC Cluster to summarize research papers and further create wording correlation mapping on words and weight parameters for graph database construction (maybe the frequency of having similar words between two paper could become the correlation weight scale between two paper). 
+Other parameters like a title / abstract / past collaboration or citations of input paper can be utilized.
+
+#### Deliverable 5: Knowledge Representation
+Once the weight correlation is determined for the connections between papers, TigerGraph will be used to initiate a graph database. This will be implemented for visualizing recommendation research papers with a weight scale to reduce preliminary research time and increase research productivity.
+
+#### Deliverable 6: Model Evaluation
+The model base will be evaluated and compare the model output statistics to some model / service out there in the market on research paper recommendation.
+
+#### Deliverable 7: Model Deployment
+After doing quality assurance, the model was deployed on HPC.
+
+#### Deliverable 8: Driving insights and generating Tableau dashboard
+Tableau dashboards can be created to compare metrics between the model produced and other models on the market for performance comparison as well as the current model and previous performance to make decisions based on insights to change the machine learning model parameters for improvements.
 
 
 This manuscript is a template (aka "rootstock") for [Manubot](https://manubot.org/ "Manubot"), a tool for writing scholarly manuscripts.

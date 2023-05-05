@@ -7,12 +7,14 @@ Ausin
 austinf
 Austing
 aute
+BioBERT
 cillum
 commodo
 consectetur
 consequat
 culpa
 cupidatat
+Deliverables
 deserunt
 dolore
 Duis
@@ -30,6 +32,7 @@ Huynh
 incididunt
 ipsum
 irure
+json
 labore
 laboris
 laborum
@@ -39,11 +42,14 @@ Markart
 marymarkart
 mollit
 nisi
+noSQL
 nostrud
 occaecat
 officia
 Pandoc’s
 pariatur
+pre
+preprocessing
 proident
 qui
 quis
@@ -56,6 +62,7 @@ Thinh
 thinhh
 TigerGraph
 tuedolm
+TXT
 ullamco
 velit
 veniam
