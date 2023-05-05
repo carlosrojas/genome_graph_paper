@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T19:23:27+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:23:27+00:00" />
+  <meta name="dc.modified" content="2023-05-05T19:28:31+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T19:28:31+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/ad542ef3e1e435c394dc2f1f429bd2973a9653e3/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/ad542ef3e1e435c394dc2f1f429bd2973a9653e3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/ad542ef3e1e435c394dc2f1f429bd2973a9653e3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/d9205733926ff93a2df9f1e3ffbaa303b08b47f6/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/ad542ef3e1e435c394dc2f1f429bd2973a9653e3/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@d920573](https://github.com/carlosrojas/genome_graph_paper/tree/d9205733926ff93a2df9f1e3ffbaa303b08b47f6)
+from [carlosrojas/genome_graph_paper@ad542ef](https://github.com/carlosrojas/genome_graph_paper/tree/ad542ef3e1e435c394dc2f1f429bd2973a9653e3)
 on May 5, 2023.
 </em></small>
 
@@ -152,7 +152,7 @@ Thinh Huynh \<thinh.huynh@sjsu.edu\>.
 :::
 
 
-## Abstract{.page_break_before}{.center}
+## [Abstract]{.page_break_before}{.center}
 
 ### Machine Learning of Biomedical Text for Gene Network Knowledge{.center}
 
