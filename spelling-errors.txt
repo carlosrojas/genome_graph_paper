@@ -51,7 +51,7 @@ GeneTuKit
 GenNorm
 Gimli
 GNBR
-GNormPlus
+GnormPlus
 GPUs
 Hetionet
 homogenous

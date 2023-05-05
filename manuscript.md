@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T19:56:47+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:56:47+00:00" />
+  <meta name="dc.modified" content="2023-05-05T20:02:32+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T20:02:32+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@be6e182](https://github.com/carlosrojas/genome_graph_paper/tree/be6e1821c4f6273ff24bff8e81ee4365e32d7d41)
+from [carlosrojas/genome_graph_paper@f32dd4d](https://github.com/carlosrojas/genome_graph_paper/tree/f32dd4d0e66d48a45818ca2a3a0029075a692409)
 on May 5, 2023.
 </em></small>
 
@@ -281,7 +281,8 @@ attributes; draw a set of state machine diagrams for key business classes.]
 
 ### 3.2 System (or Component) Functional Requirements
 
-Functional Requirements
+#### Functional Requirements
+
 | No. | Functional Requirement                                                                                 | Essential/Desirable/Optional |
 |-----|-----------------------------------------------------------------------------------------------------|------------------------------|
 | 1   | Should extract data from Pubmed                                                                     | Essential                    |

@@ -119,8 +119,8 @@
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T19:56:47+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:56:47+00:00" />
+  <meta name="dc.modified" content="2023-05-05T20:02:32+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T20:02:32+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -141,9 +141,9 @@
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -167,9 +167,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/">permalink</a>)
+(<a href="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/carlosrojas/genome_graph_paper/tree/be6e1821c4f6273ff24bff8e81ee4365e32d7d41">carlosrojas/genome_graph_paper@be6e182</a>
+from <a href="https://github.com/carlosrojas/genome_graph_paper/tree/f32dd4d0e66d48a45818ca2a3a0029075a692409">carlosrojas/genome_graph_paper@f32dd4d</a>
 on May 5, 2023.
 </em></small></p>
 <p>Published: February 1, 2023</p>
@@ -301,21 +301,75 @@ The article Building a PubMed knowledge graph explores how Pubmed abstracts can 
 decomposition diagrams. Draw a domain class diagram of business classes with
 attributes; draw a set of state machine diagrams for key business classes.]</p>
 <h3 id="system-or-component-functional-requirements">3.2 System (or Component) Functional Requirements</h3>
-<p>Functional Requirements
-| No. | Functional Requirement | Essential/Desirable/Optional |
-|—–|—————————————————————————————————–|——————————|
-| 1 | Should extract data from Pubmed | Essential |
-| 2 | Shall use APIs from sources besides Pubmed: - Semantic Scholar - Hetionet - IntAct - STRING - DGIDB | Desirable |
-| 3 | Shall generate a list of related papers | Optional |
-| 4 | Should pre-process data | Essential |
-| 5 | Should Use BioBERT to recognize gene relationships | Essential |
-| 6 | Shall Use GNormPlus to normalize gene names | Optional |
-| 7 | Shall Use other NLPs to recognize gene relationships | Optional |
-| 8 | Shall use other NLPs to normalize gene names | Optional |
-| 9 | Should create model trained from extracted data | Essential |
-| 10 | Should create graph using TigerGraph | Essential |
-##### Table 1: Project Requirements {#tbl:functional-reqs}
-Extracting data from Pubmed is an essential requirement because that is where we are sourcing the biotechnology information to create the training set and the testing set. It would also be desirable to use APIs from sources besides Pubmed to have more diversified training and testing sets and increase our credibility.
+<h4 id="functional-requirements">Functional Requirements</h4>
+<table>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 74%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>No.</th>
+<th>Functional Requirement</th>
+<th>Essential/Desirable/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Should extract data from Pubmed</td>
+<td>Essential</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Shall use APIs from sources besides Pubmed: - Semantic Scholar - Hetionet - IntAct - STRING - DGIDB</td>
+<td>Desirable</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Shall generate a list of related papers</td>
+<td>Optional</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Should pre-process data</td>
+<td>Essential</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Should Use BioBERT to recognize gene relationships</td>
+<td>Essential</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Shall Use GNormPlus to normalize gene names</td>
+<td>Optional</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Shall Use other NLPs to recognize gene relationships</td>
+<td>Optional</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Shall use other NLPs to normalize gene names</td>
+<td>Optional</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Should create model trained from extracted data</td>
+<td>Essential</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Should create graph using TigerGraph</td>
+<td>Essential</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tbl:functional-reqs">Table 1: Project Requirements</h5>
+<p>Extracting data from Pubmed is an essential requirement because that is where we are sourcing the biotechnology information to create the training set and the testing set. It would also be desirable to use APIs from sources besides Pubmed to have more diversified training and testing sets and increase our credibility.
 One of the goals of our project is to generate a list of related papers of one genome, therefore it is an essential requirement of the project. The pre-processing of data is essential because we need to convert the extracted data from the xml and txt format into solely xml or json format to make it usable. Through Natural Language Processing (NLP), the document can be scanned for gene names and will be used inside the model in order to generate the list of related papers.
 The last essential requirement is to create a correlation between papers based on their weights using TigerGraph, making the graph scalable would create a result in a reasonable amount of time allowing more correlated papers to be listed at a given time. We also defined an optional requirement in that the user will receive the results in an appropriate amount of time related to their request.</p>
 <p>3.3 Non-function Requirements</p>
@@ -664,7 +718,7 @@ Note that if you want to export to Word (<code>.docx</code>), you need to downlo
 </tbody>
 </table>
 </div>
-<div id="tbl:2162217a-6681-4088-9e40-59fa0bfa917f" class="tablenos">
+<div id="tbl:eb2125f7-904b-4969-bad9-b14510095687" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
