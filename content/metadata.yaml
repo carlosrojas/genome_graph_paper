@@ -13,6 +13,7 @@ authors:
     email: mary.markart@sjsu.edu    
     affiliations:
       - Charles W. Davidson College of Engineering, San Jose State University
+    corresponding: true
   - github: austinf01
     name: Austin Fong
     initials: AF
@@ -31,4 +32,3 @@ authors:
     email: thinh.huynh@sjsu.edu
     affiliations:
       - Charles W. Davidson College of Engineering, San Jose State University
-    corresponding: true
