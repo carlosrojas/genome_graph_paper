@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning of Biomedical Text for Gene Network Knowledge"
-date: '2023-02-01'.
+date: '2023-02-01'
 keywords:
   - markdown
   - publishing
@@ -19,3 +19,16 @@ authors:
     email: austin.fong@sjsu.edu
     affiliations:
       - Charles W. Davidson College of Engineering, San Jose State University
+  - github: tuedolm
+    name: Tue Doe
+    initials: TD
+    email: tue.do@sjsu.edu
+    affiliations:
+      - Charles W. Davidson College of Engineering, San Jose State University
+  - github: thinhh
+    name: Thinh Huynh
+    initials: TH
+    email: thinh.huynh@sjsu.edu
+    affiliations:
+      - Charles W. Davidson College of Engineering, San Jose State University
+    corresponding: true
