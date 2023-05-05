@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T19:48:54+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:48:54+00:00" />
+  <meta name="dc.modified" content="2023-05-05T19:53:33+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T19:53:33+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/5c489159839c38368e024cc35a5d6d692647fd2a/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/5c489159839c38368e024cc35a5d6d692647fd2a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/5c489159839c38368e024cc35a5d6d692647fd2a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/5c489159839c38368e024cc35a5d6d692647fd2a/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@5c48915](https://github.com/carlosrojas/genome_graph_paper/tree/5c489159839c38368e024cc35a5d6d692647fd2a)
+from [carlosrojas/genome_graph_paper@fd6ff2a](https://github.com/carlosrojas/genome_graph_paper/tree/fd6ff2aa3c2b41af523e99113e5dee103ace9e05)
 on May 5, 2023.
 </em></small>
 
@@ -247,8 +247,10 @@ Hugging Face is an open-source natural language processing library open to all M
 
 ##### BioBERT & GNormPlus: 
 Bidirectional Encoder Representations (BERT) is a transformer-based machine learning technique for natural language processing pre-training developed by Google. This will be paired with a gene recognition tool and can be applied to PubMed to filter the results and apply operations to determine a weighted score for correlations between connected papers.
+
 ##### TigerGraph: 
 A native parallel graph database purpose-built for loading massive amounts of data and analyzing their relationships to create connections between papers. 
+
 ##### High Performance Computation (HPC): 
 Computing system available through San Jose State University with multi-core multi-socket servers, high performance in regards to storage, GPUs, and a significant amount of memory available on an interconnected network.
  
@@ -267,6 +269,72 @@ The USA National Center for Biotechnology Information (NCBI) contains informatio
 GNAT and Gimli have been known as the baseline tools with the state-of-the-art performance on scientific articles [4]. GeneTuKit works using four main node modules. The first module is for gene mention recognition, the second is for gene ID candidate generation, the third is for gene ID disambiguation to distinguish between genes, and the fourth module is for generating a confidence score for each predicted gene ID. GNAT and GeneTuKit have reasonable execution times, when scaled up, GeneTuKit takes 9 times as long as GNAT. However, GNormPlus and Gimli take an impractical amount of time when scaled up. At the document level, GnormPlus performs the best; however, when scaling up then GNAT gives the most precision within a reasonable amount of time. 
 
 To visually represent a knowledge graph, applications such as TigerGraph are used as a backend graph database to store the knowledge graph and the newly discovered relationships together with some graph machine learning techniques.TigerGraph has recently been used in a Drug Repurposing Knowledge Graph (DRKG) to generate visual representations for newly found gene relations. Drug Repurposing Knowledge Graph (DRKG) is a comprehensive biological knowledge graph relating genes, compounds, diseases, biological processes, side effects and symptoms.[10].  DRKG is freely available to import into our TigerGraph database for the general purpose of recreating new graphs for the gene of interest. 
+
+
+## [Chapter 3   Project Requirements]{.page_break_before}{.center}
+
+### 3.1 Domain and Business Requirements 
+[Use UML 2 activity diagram to draw process summary diagram and a set of process 
+decomposition diagrams. Draw a domain class diagram of business classes with 
+attributes; draw a set of state machine diagrams for key business classes.]
+
+
+### 3.2 System (or Component) Functional Requirements
+
+Functional Requirements
+| No. | Functional Requirement                                                                                 | Essential/Desirable/Optional |
+|-----|-----------------------------------------------------------------------------------------------------|------------------------------|
+| 1   | Should extract data from Pubmed                                                                     | Essential                    |
+| 2   | Shall use APIs from sources besides Pubmed: - Semantic Scholar - Hetionet - IntAct - STRING - DGIDB | Desirable                    |
+| 3   | Shall generate a list of related papers                                                             | Optional                     |
+| 4   | Should pre-process data                                                                             | Essential                    |
+| 5   | Should Use BioBERT to recognize gene relationships                                                  | Essential                    |
+| 6   | Shall Use GNormPlus to normalize gene names                                                         | Optional                     |
+| 7   | Shall Use other NLPs to recognize gene relationships                                                | Optional                     |
+| 8   | Shall use other NLPs to normalize gene names                                                        | Optional                     |
+| 9   | Should create model trained from extracted data                                                     | Essential                    |
+| 10  | Should create graph using TigerGraph                                                                | Essential                    |
+##### Table 1: Project Requirements {#tbl:functional-reqs}
+Extracting data from Pubmed is an essential requirement because that is where we are sourcing the biotechnology information to create the training set and the testing set. It would also be desirable to use APIs from sources besides Pubmed to have more diversified training and testing sets and increase our credibility. 
+One of the goals of our project is to generate a list of related papers of one genome, therefore it is an essential requirement of the project. The pre-processing of data is essential because we need to convert the extracted data from the xml and txt format into solely xml or json format to make it usable. Through Natural Language Processing (NLP), the document can be scanned for gene names and will be used inside the model in order to generate the list of related papers. 
+The last essential requirement is to create a correlation between papers based on their weights using TigerGraph, making the graph scalable would create a result in a reasonable amount of time allowing more correlated papers to be listed at a given time. We also defined an optional requirement in that the user will receive the results in an appropriate amount of time related to their request.  
+
+3.3 Non-function Requirements
+
+#### Non-functional Requirements
+| No. | Non-Functional Requirements                                                             | Essential/Desirable/Optional |
+|-----|-----------------------------------------------------------------------------------------|------------------------------|
+| 1   | The system commands shall deliver a response within 3 seconds of requesting an output.  | Essential                    |
+| 2   | The graph database shall be scalable                                                    | Essential                    |
+| 3   | The system shall be available                                                           | Essential                    |
+| 4   | The system shall be secure                                                              | Essential                    |
+##### Table 2: Non-Functional Requirements {#tbl:nonfunc-reqs}
+
+
+### 3.4 Context and Interface Requirements
+[Specify the context environments supporting your development, testing, and deployment 
+of your project results. You also need to describe the interface requirements for your 
+hardware/software components and system.]
+| No | Context and Interface Requirements                        | Essential/Desirable/Optional |
+|----|-----------------------------------------------------------|------------------------------|
+| 1  | The knowledge graph should run on any operating system.   | Essential                    |
+| 2  | The knowledge graph should be hosted on Tigercloud        | Essential                    |
+| 3  | BioBERT model shall be trained on HPC                     | Essential                    |
+| 4  | TigerGraph should be used to store gene relationship data | Essential                    |
+| 5  | Web Application shall be used to display knowledge graph  | Desireable                   |
+##### Table 3: Context and Interface Requirements {#tbl:context-reqs}
+
+
+
+### 3.5 Technology and Resource Requirements
+
+| No | Technology and Resource Requirements                    | Essential/Desirable/Optional |
+|----|---------------------------------------------------------|------------------------------|
+| 1  | The system shall use a minimum of 1 compute node on HPC | Essential                    |
+| 2  | The graph database should handle 35 Million entries     | Essential                    |
+##### Table 4: Technology and Resource Requirements {#tbl:tech-reqs}
+
+
 
 
 This manuscript is a template (aka "rootstock") for [Manubot](https://manubot.org/ "Manubot"), a tool for writing scholarly manuscripts.
