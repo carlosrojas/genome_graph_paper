@@ -1,3 +1,10 @@
+content/01.abstract.md:7:Fong
+content/01.abstract.md:7:Huynh
+content/01.abstract.md:7:Markart
+content/01.abstract.md:7:Thinh
+content/01.abstract.md:15:GNormPlus
+content/01.abstract.md:15:HPC
+content/01.abstract.md:15:TigerGraph
 content/02.delete-me.md:44:adipiscing
 content/02.delete-me.md:44:aliqua
 content/02.delete-me.md:44:amet

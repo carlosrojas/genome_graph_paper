@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2023-04-22'
+date-meta: '2023-05-05'
 author-meta:
 - John Doe
 - Jane Roe
@@ -20,11 +20,11 @@ header-includes: |
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2023-04-22" />
-  <meta name="citation_publication_date" content="2023-04-22" />
-  <meta property="article:published_time" content="2023-04-22" />
-  <meta name="dc.modified" content="2023-04-22T12:33:04+00:00" />
-  <meta property="article:modified_time" content="2023-04-22T12:33:04+00:00" />
+  <meta name="dc.date" content="2023-05-05" />
+  <meta name="citation_publication_date" content="2023-05-05" />
+  <meta property="article:published_time" content="2023-05-05" />
+  <meta name="dc.modified" content="2023-05-05T18:42:00+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T18:42:00+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f3e0520060162f71f0950ea88d44de526d241ad1/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f3e0520060162f71f0950ea88d44de526d241ad1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f3e0520060162f71f0950ea88d44de526d241ad1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -69,10 +69,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f3e0520060162f71f0950ea88d44de526d241ad1/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f3dead1beff06992c4445d71681ac3726c9dbf79/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@f3e0520](https://github.com/carlosrojas/genome_graph_paper/tree/f3e0520060162f71f0950ea88d44de526d241ad1)
-on April 22, 2023.
+from [carlosrojas/genome_graph_paper@f3dead1](https://github.com/carlosrojas/genome_graph_paper/tree/f3dead1beff06992c4445d71681ac3726c9dbf79)
+on May 5, 2023.
 </em></small>
 
 
@@ -118,7 +118,21 @@ Jane Roe \<jane.roe@whatever.edu\>.
 :::
 
 
-## Abstract {.page_break_before}
+## Abstract {.page_break_before}{.center}
+
+### Machine Learning of Biomedical Text for Gene Network Knowledge{.center}
+
+
+
+##### By Tue Do, Austin Fong, Thinh Huynh, Mary Markart{.center}
+
+
+Genetic research is the study of DNA to find out what genes and environmental factors contribute to diseases. There are multiple studies conducted on individuals or groups of genes and how they impact health and disease. Thus, there is no lack in the amount of data to draw conclusions from and researchers have the potential to make more connections from within the data.
+
+An issue arises when it takes a long time to find and sift through biomedical research papers to find knowledge useful to researchers. There are already ideas present in literature, but also a lack of finding a connection between already present ideas. Researchers are constantly looking to find these connections; however, there is a limiting factor of time and can be overwhelming without the right tools.
+
+
+Data from text mining biomedical texts was warehoused through the College of Engineering HPC or AWS DynamoDB and AWS Redshift. Data processing utilized BERT and GNormPlus models to categorize and normalize input. TigerGraph was used to represent the knowledge accumulated to visualize relationships. This project reduced the amount of time needed to search through biomedical research by making it easier to discover knowledge about various biological mechanisms using machine learning.
 
 
 
