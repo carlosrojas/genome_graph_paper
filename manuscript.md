@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T19:53:33+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T19:53:33+00:00" />
+  <meta name="dc.modified" content="2023-05-05T19:56:47+00:00" />
+  <meta property="article:modified_time" content="2023-05-05T19:56:47+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/fd6ff2aa3c2b41af523e99113e5dee103ace9e05/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/be6e1821c4f6273ff24bff8e81ee4365e32d7d41/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@fd6ff2a](https://github.com/carlosrojas/genome_graph_paper/tree/fd6ff2aa3c2b41af523e99113e5dee103ace9e05)
+from [carlosrojas/genome_graph_paper@be6e182](https://github.com/carlosrojas/genome_graph_paper/tree/be6e1821c4f6273ff24bff8e81ee4365e32d7d41)
 on May 5, 2023.
 </em></small>
 
@@ -334,6 +334,72 @@ hardware/software components and system.]
 | 2  | The graph database should handle 35 Million entries     | Essential                    |
 ##### Table 4: Technology and Resource Requirements {#tbl:tech-reqs}
 
+
+
+
+## [Chapter 4. System Design]{.page_break_before}{.center}
+        
+### 4.1 Architecture Design
+#### 4.1.1. Architecture Design
+
+##### Figure 1: Project Architecture
+
+1. Data Extraction: pulling in biotechnology information from the various APIs listed. 
+2. Exploration and Validation: focuses on the content and the structure of the data. The goal is to have a set of metadata in xml or json file format. The data needs to be structured in a way to be homogenous to one another to make it usable in SQL. 
+3. Data Wrangling: clean the data, reformatting particular attributes or correcting errors in the data. 
+4. Data Storing: The data is stored in the SQL Data Warehouse
+5. Data Splitting: At the data warehouse, the data is split into training and validation/testing datasets to be used in producing the machine learning model.
+6. Model Engineering: The machine learning algorithm is applied to the training data to train a machine learning model, which includes feature engineering, using domain knowledge to extract features from the data, and hyperparameter tuning to maximize the model’s performance for better results.
+7. Model Evaluation: running the model with the validation and testing data to ensure it is suitable for production. 
+8. Model Packaging: exporting the model in a specific format to be used in the final application. 
+9. Model Deployment: Deploying the application using HPC or online cloud computing to host the application. 
+10. Model Visualization: use a weighted graph or vectors to determine what search results show for the application in the outputted results. 
+11. Model Performance monitoring and logging: fine tune our model using feedback or reviewing the results in performance and visualization of the application. 
+ 
+
+#### 4.1.2. Project Design
+There are five necessary design elements to implement the project.
+##### Data extraction: HuggingFace
+For data extraction, we have decided to use PubMed abstracts as a data source. The information can be gained from the datasets available on HuggingFace for PubMed. 
+
+##### Gene Name Recognition: BioBERT
+For gene name recognition, we have decided to use Bidirectional Encoder Representations from Transformers for Biomedical Text Mining (BioBERT) [7]. BioBERT is a pre-trained biomedical language representation model for biomedical text mining. It is built off of Bidirectional Encoder Representations from Transformers (BERT) with the specific purpose of text-mining biomedical data. It is initialized with weights obtained from BERT. It is then pre-trained with biomedical data obtained from PubMed. BioBERT must be fine-tuned for the Name Entity Recognition and Relation Extraction necessary to implement the project. 
+
+##### Normalization: GNormPlus
+For normalization, we are using the tools GNormPlus for genes/proteins and sieve-based entity linking for diseases. 
+GNormPlus: GNormPlus resolves composite gene and protein names using advanced text-mining techniques [9]. The normalization step uses GenNorm, a generalized normal continuous random variable, a simplification tool for composite names, and an abbreviation tool to handle abbreviated gene names. 
+
+##### Graph Database: TigerGraph
+For the graph database, our project uses TigerGraph. TigerGraph is built on a native graph database and implements an SQL-like query language [1]. TigerGraph can show how entities, such as genes, are related to each other. Knowledge can be gained about gene-to-gene relationships through a graph created in TigerGraph. The resulting graph can be hosted on Tiger Cloud. 
+
+##### High Performance Computing (HPC)
+A high performance computing system is available to use through the San Jose State University College of Engineering (CoE) [4]. This system is necessary to implement all the computationally complex tools to extract, text-mine, and normalize our data.
+
+##### Figure 2: Project Design - Gene-to-Gene Knowledge Graph Framework
+
+ 
+### 4.2  Design Constraints, Problems, Trade-offs, and Solutions
+ 
+#### 4.2.1 Design Constraints and Challenges
+##### Computational Complexity
+There are challenges in running a gene recognition tool on a high quantity of data that we plan on running it on. A choice in different tools can yield more accurate results but take an exponential amount of time. Therefore, we need to ensure our project utilizes a combination of tools that yields sufficient results in a reasonable time. 
+
+##### Computational Power
+Our project is very computationally heavy so we need to use the College of Engineering’s High Performance Computing (HPC) system. If the HPC system is not sufficient enough in terms of processing power, we will need to seek other cloud computing systems,
+
+##### Data Processing Requirements
+The challenges of data processing are a set rate on the amount of data pulled from APIs and a large storage requirement. For example, The pubmed APIs allow us to retrieve only 10 requests/second. Each paper that is retrieved from the API needs to be stored to be processed, which requires a large amount of storage space. 
+
+
+#### 4.2.2 Design Solutions and Trade-offs
+##### Computational Complexity
+GNormPlus and BioBERT are more computationally complex than its alternatives. GNormPlus requires more comparisons to be made with mapping words to gene nomenclature, parsing through text and keeping track of genes within a paper. If the time it takes to run GNormPlus is not within a reasonable time for searching data (within a few hours) or it is too performance intensive, then we will have to switch to less computationally complex tools, such as GNAT, that give up precision in gene name recognition for faster processing times. 
+
+##### Computational Power
+Our team believes using the College of Engineering’s High Performance Computing (HPC) system will provide the resources necessary to complete the processes for data extraction and processing. In the future, if our team runs into a problem with pricing for storage or computational capacity, then we should be able to find a more affordable alternative for cloud computing services. 
+
+##### Data Processing Requirements 
+Pubmed API allows us to retrieve up to 10,000 results and requests without an API key have a rate limit of 3 requests/second. Requests with an API key have a default rate limit of 10 requests/second. Our group will consider this amount of data as acceptable for now. However, if we want a larger amount of dataset, we can improve the algorithm that we use for the API. Funds are available to reimburse the cost of AWS if necessary.
 
 
 

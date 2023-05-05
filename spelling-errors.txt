@@ -14,6 +14,7 @@ BioBERT
 bioinformatics
 centric
 cillum
+CoE
 commodo
 consectetur
 consequat
@@ -22,9 +23,9 @@ culpa
 cupidatat
 Dask
 dataset
-datasets
+Datasets
 dbSNP
-Deliverables
+deliverables
 deserunt
 Desireable
 DGIDB
@@ -47,14 +48,17 @@ Fong
 fugiat
 GenBank
 GeneTuKit
+GenNorm
 Gimli
 GNBR
 GNormPlus
 GPUs
 Hetionet
+homogenous
 HPC
 HuggingFace
 Huynh
+hyperparameter
 incididunt
 ipsum
 irure
@@ -89,7 +93,7 @@ qui
 quis
 reprehenderit
 reprofiling
-repurposing
+Repurposing
 reqs
 scalable
 sed
@@ -103,7 +107,7 @@ TigerGraph
 TSQL
 TSV
 tuedolm
-txt
+TXT
 ullamco
 UML
 vectorizing
