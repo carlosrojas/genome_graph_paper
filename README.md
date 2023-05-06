@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/carlosrojas/genome_graph_paper/tree/gh-pages) branch hosts the contents of this directory at <https://carlosrojas.github.io/genome_graph_paper/>.
-The permalink for this webpage version is <https://carlosrojas.github.io/genome_graph_paper/v/d3e538d39fcfbd5f99061a2cc80406df2d64307f/>.
+The permalink for this webpage version is <https://carlosrojas.github.io/genome_graph_paper/v/959c8ad30b1879783c464ddec0ada8cc9e2b91df/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://carlosrojas.github.io/genome_graph_paper/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`d3e538d39fcfbd5f99061a2cc80406df2d64307f`](https://github.com/carlosrojas/genome_graph_paper/commit/d3e538d39fcfbd5f99061a2cc80406df2d64307f).
+[`959c8ad30b1879783c464ddec0ada8cc9e2b91df`](https://github.com/carlosrojas/genome_graph_paper/commit/959c8ad30b1879783c464ddec0ada8cc9e2b91df).
