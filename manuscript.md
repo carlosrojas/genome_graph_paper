@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-06T01:39:52+00:00" />
-  <meta property="article:modified_time" content="2023-05-06T01:39:52+00:00" />
+  <meta name="dc.modified" content="2023-05-06T01:43:33+00:00" />
+  <meta property="article:modified_time" content="2023-05-06T01:43:33+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/241090ba273a56e4bc26eb305dd4684fee153125/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/241090ba273a56e4bc26eb305dd4684fee153125/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/241090ba273a56e4bc26eb305dd4684fee153125/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/d3e538d39fcfbd5f99061a2cc80406df2d64307f/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d3e538d39fcfbd5f99061a2cc80406df2d64307f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d3e538d39fcfbd5f99061a2cc80406df2d64307f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/241090ba273a56e4bc26eb305dd4684fee153125/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/d3e538d39fcfbd5f99061a2cc80406df2d64307f/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@241090b](https://github.com/carlosrojas/genome_graph_paper/tree/241090ba273a56e4bc26eb305dd4684fee153125)
+from [carlosrojas/genome_graph_paper@d3e538d](https://github.com/carlosrojas/genome_graph_paper/tree/d3e538d39fcfbd5f99061a2cc80406df2d64307f)
 on May 6, 2023.
 </em></small>
 
@@ -404,7 +404,8 @@ Pubmed API allows us to retrieve up to 10,000 results and requests without an AP
 
 
 
-## [Chapter 5 System Implementation]
+
+## [Chapter 5. System Implementation]{.page_break_before}{.center}
 ### 5.1	Implementation Overview
 
 In order to create a knowledge graph representing gene-to-gene relationships, we needed to find a source of data, a machine learning model to get relationships from the data, a way to graph these relationships, and enough processing power to handle these tasks. We are able to achieve this by using the College of Engineering's High Performance Computing (HPC).
@@ -416,8 +417,8 @@ Once we have trained our BioBERT model on the Pubmed data, we will use a TigerGr
 #### Data Extraction
 For data extraction, we used PubMed abstracts as a data source. To implement this, we are using datasets from HuggingFace. HuggingFace datasets are available in the library called Datasets and can be split into the train, validation, and test sets. HuggingFace was selected because its datasets are easy to manipulate for our intended purpose and contain all the abstracts available on PubMed. Pubmed contains about 35 million articles, which are readily available through HuggingFace
 
-#### Named-Entity Recognition, Relation Extraction and Normalization
-For named-entity recognition and relation extraction, we used BioBERT pre-trained models on the PubMed datasets and GNormPlus for gene name normalization. We used pre-trained models available through BioBERT on HuggingFace and fine-tuned them using datasets available from “Tagging genes and proteins with BioBERT” [2]. For BioBERTs relation extraction, we use a rule-based approach that will look for gene-to-gene interactions along with relationship types such as passive, reactive, and active.
+#### Relation Extraction and Normalization
+For relation extraction, we used BioBERT pre-trained models on the PubMed datasets and GNormPlus along with sieve-based entity linking for Gene name normalization. We used pre-trained models available through BioBERT on HuggingFace and fine-tuned them using datasets available from “Tagging genes and proteins with BioBERT” [2]. For BioBERTs relation extraction, we use a rule-based approach that will look for gene-to-gene interactions along with relationship types such as passive, reactive, and active.
 
 #### Graph Database
 For the graph database, our project uses TigerGraph. For this portion, we will base it on the Drug Repurposing Knowledge Graph [3] and Pubmed Knowledge Graph [1] that we will fine-tune to meet our specifications and schema. 
@@ -426,13 +427,48 @@ For the graph database, our project uses TigerGraph. For this portion, we will b
 ### 5.2 Implementation of Developed Solutions
 
 We have implemented the data extraction by using the HuggingFace datasets. From these datasets, we have created train, test, and validation sets. Using the pre-trained BioBERT model, we have trained the model using our test sets with a semi-supervised approach to analyze the model. We calculated the F1 score of the model and deemed it appropriate to continue the rest of implementation. After fine-tuning the model, we used it to run relation extraction on the datasets and find the gene-to-gene interactions and relationships. We then created a knowledge graph utilizing TigerGraph to plot the interactions and relationships we found on the genes. 
-5.3 Implementation Problems, Challenges, and Lessons Learned
+### 5.3 Implementation Problems, Challenges, and Lessons Learned
 
 #### Implementation Problems and Challenges
 The problems and challenges of implementation include having to workaround the potential downtime of the HPC and connecting the output of the name entity recognition with the relation extraction. 
 
-#### Lessons Learned
-Lessons we learned are that we should have started implementation earlier to have more time to work through the problems. As well as researched more on similar issues that we had before the implementation phase of the project. 
+### Lessons Learned
+Lessons we learned are that we should have started implementation earlier to have more time to work through the problems. As well as researched more on similar issues that we had before the implementation phase of the project
+
+
+## [Chapter 6. Tools and Standards]{.page_break_before}{.center}
+
+### 6.1.	Tools Used 
+
+#### HuggingFace
+	
+For this project we utilized HuggingFace, which provides open source AI that includes datasets and models which we have utilized in our project. For datasets, we used the Datasets library available through HuggingFace which contains a ‘pubmed’ dataset containing all the Abstracts available on Pubmed. 
+
+### BioBERT
+
+BioBERT is a pre-trained biomedical language representation model for biomedical text mining. After we complete mining biomedical text, we will use BioBert as a model for Named Entity Recognition (NER) and Relation Extraction (RE) of our dataset. 
+
+### TigerGraph
+
+Once we finish with extracting the name entity and relationship of genes, we will set up a schema in Tigergraph to generate a knowledge graph for visualization. 
+
+### The College of Engineering (CoE) High Performance Computing (HPC)
+
+Since the project require a heavy amount of workload, we choose to use the HPC to store all our data and code use to computing an output
+	
+### Jupyter Notebooks
+
+We installed Jupyter Notebooks inside our HPC for its graphical user interface. 
+
+### Python
+
+The language Python is used for implementing our project
+
+## 6.2.	Standards 
+
+[This section describes the standards you used in your project. These standards could be related to hardware/software system and its components, requirements, design, interface, testing, protocols, documentation, and so on.]
+
+Standard 2807-2022 - IEEE Standard for Framework of Knowledge Graphs defines the standard for the framework of a knowledge graph. This includes the conceptualization, construction, and integration of knowledge graphs. https://ieeexplore.ieee.org/document/10017167
 
 
 ## [Chapter 7 Testing and Experiment]{.center}{.page_break_before} 

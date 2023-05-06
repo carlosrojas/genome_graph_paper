@@ -24,12 +24,12 @@ culpa
 cupidatat
 Dask
 dataset
-Datasets
+datasets
 dbSNP
-Deliverables
+deliverables
 deserunt
 Desireable
-DGIDB
+DGIdb
 differentially
 dolore
 DRKG
@@ -52,7 +52,7 @@ GeneTuKit
 GenNorm
 Gimli
 GNBR
-GNormPlus
+GnormPlus
 GPUs
 Hetionet
 homogenous
@@ -64,6 +64,7 @@ incididunt
 ipsum
 irure
 json
+Jupyter
 labore
 laboris
 laborum
@@ -94,7 +95,7 @@ qui
 quis
 reprehenderit
 reprofiling
-repurposing
+Repurposing
 reqs
 scalable
 sed
@@ -108,7 +109,7 @@ TigerGraph
 TSQL
 TSV
 tuedolm
-txt
+TXT
 ullamco
 UML
 vectorizing
