@@ -10,7 +10,7 @@ Austing
 aute
 aychoronously
 backend
-BioBERT
+BioBert
 BioBERTs
 bioinformatics
 centric
@@ -29,7 +29,7 @@ dbSNP
 deliverables
 deserunt
 Desireable
-DGIdb
+DGIDB
 differentially
 dolore
 DRKG
@@ -52,7 +52,7 @@ GeneTuKit
 GenNorm
 Gimli
 GNBR
-GnormPlus
+GNormPlus
 GPUs
 Hetionet
 homogenous
