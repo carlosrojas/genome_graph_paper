@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-05T20:02:32+00:00" />
-  <meta property="article:modified_time" content="2023-05-05T20:02:32+00:00" />
+  <meta name="dc.modified" content="2023-05-06T01:22:46+00:00" />
+  <meta property="article:modified_time" content="2023-05-06T01:22:46+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/c9ef1ac9f6834713713dcfb01255fe73c9e22ebd/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/c9ef1ac9f6834713713dcfb01255fe73c9e22ebd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/c9ef1ac9f6834713713dcfb01255fe73c9e22ebd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,10 +71,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f32dd4d0e66d48a45818ca2a3a0029075a692409/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/c9ef1ac9f6834713713dcfb01255fe73c9e22ebd/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@f32dd4d](https://github.com/carlosrojas/genome_graph_paper/tree/f32dd4d0e66d48a45818ca2a3a0029075a692409)
-on May 5, 2023.
+from [carlosrojas/genome_graph_paper@c9ef1ac](https://github.com/carlosrojas/genome_graph_paper/tree/c9ef1ac9f6834713713dcfb01255fe73c9e22ebd)
+on May 6, 2023.
 </em></small>
 
 Published: February 1, 2023
@@ -402,6 +402,37 @@ Our team believes using the College of Engineering’s High Performance Computin
 ##### Data Processing Requirements 
 Pubmed API allows us to retrieve up to 10,000 results and requests without an API key have a rate limit of 3 requests/second. Requests with an API key have a default rate limit of 10 requests/second. Our group will consider this amount of data as acceptable for now. However, if we want a larger amount of dataset, we can improve the algorithm that we use for the API. Funds are available to reimburse the cost of AWS if necessary.
 
+
+
+## [Chapter 5 System Implementation]
+### 5.1	Implementation Overview
+
+In order to create a knowledge graph representing gene-to-gene relationships, we needed to find a source of data, a machine learning model to get relationships from the data, a way to graph these relationships, and enough processing power to handle these tasks. We are able to achieve this by using the College of Engineering's High Performance Computing (HPC).
+
+The methodology framework is based on the design from “Building a pubmed knowledge graph,” [4]. Instead of relating the nodes by Pubmed entries, the nodes will show gene-to-gene relationships through the relation extraction functionality available in BioBERT [1].
+
+Once we have trained our BioBERT model on the Pubmed data, we will use a TigerGraph schema to map relationships and host our graph on TigerCloud.
+
+#### Data Extraction
+For data extraction, we used PubMed abstracts as a data source. To implement this, we are using datasets from HuggingFace. HuggingFace datasets are available in the library called Datasets and can be split into the train, validation, and test sets. HuggingFace was selected because its datasets are easy to manipulate for our intended purpose and contain all the abstracts available on PubMed. Pubmed contains about 35 million articles, which are readily available through HuggingFace
+
+#### Named-Entity Recognition, Relation Extraction and Normalization
+For named-entity recognition and relation extraction, we used BioBERT pre-trained models on the PubMed datasets and GNormPlus for gene name normalization. We used pre-trained models available through BioBERT on HuggingFace and fine-tuned them using datasets available from “Tagging genes and proteins with BioBERT” [2]. For BioBERTs relation extraction, we use a rule-based approach that will look for gene-to-gene interactions along with relationship types such as passive, reactive, and active.
+
+#### Graph Database
+For the graph database, our project uses TigerGraph. For this portion, we will base it on the Drug Repurposing Knowledge Graph [3] and Pubmed Knowledge Graph [1] that we will fine-tune to meet our specifications and schema. 
+
+
+### 5.2 Implementation of Developed Solutions
+
+We have implemented the data extraction by using the HuggingFace datasets. From these datasets, we have created train, test, and validation sets. Using the pre-trained BioBERT model, we have trained the model using our test sets with a semi-supervised approach to analyze the model. We calculated the F1 score of the model and deemed it appropriate to continue the rest of implementation. After fine-tuning the model, we used it to run relation extraction on the datasets and find the gene-to-gene interactions and relationships. We then created a knowledge graph utilizing TigerGraph to plot the interactions and relationships we found on the genes. 
+5.3 Implementation Problems, Challenges, and Lessons Learned
+
+#### Implementation Problems and Challenges
+The problems and challenges of implementation include having to workaround the potential downtime of the HPC and connecting the output of the name entity recognition with the relation extraction. 
+
+#### Lessons Learned
+Lessons we learned are that we should have started implementation earlier to have more time to work through the problems. As well as researched more on similar issues that we had before the implementation phase of the project. 
 
 
 This manuscript is a template (aka "rootstock") for [Manubot](https://manubot.org/ "Manubot"), a tool for writing scholarly manuscripts.

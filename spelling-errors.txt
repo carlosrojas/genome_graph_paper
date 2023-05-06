@@ -11,6 +11,7 @@ aute
 aychoronously
 backend
 BioBERT
+BioBERTs
 bioinformatics
 centric
 cillum
@@ -23,12 +24,12 @@ culpa
 cupidatat
 Dask
 dataset
-Datasets
+datasets
 dbSNP
 deliverables
 deserunt
 Desireable
-DGIDB
+DGIdb
 differentially
 dolore
 DRKG
@@ -51,7 +52,7 @@ GeneTuKit
 GenNorm
 Gimli
 GNBR
-GnormPlus
+GNormPlus
 GPUs
 Hetionet
 homogenous
@@ -84,7 +85,7 @@ officia
 Pandoc’s
 pariatur
 PCA
-pre
+Pre
 preprocessing
 proident
 Pubmed’s
@@ -107,7 +108,7 @@ TigerGraph
 TSQL
 TSV
 tuedolm
-TXT
+txt
 ullamco
 UML
 vectorizing
