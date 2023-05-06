@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-06T03:36:16+00:00" />
-  <meta property="article:modified_time" content="2023-05-06T03:36:16+00:00" />
+  <meta name="dc.modified" content="2023-05-06T04:04:18+00:00" />
+  <meta property="article:modified_time" content="2023-05-06T04:04:18+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@f5b0171](https://github.com/carlosrojas/genome_graph_paper/tree/f5b01716492c45c459ffdae49ed8e7815374f8a5)
+from [carlosrojas/genome_graph_paper@f1592b9](https://github.com/carlosrojas/genome_graph_paper/tree/f1592b923e7297a5259b85b8f6d076a2281e83c2)
 on May 6, 2023.
 </em></small>
 
@@ -429,16 +429,18 @@ For the graph database, our project uses TigerGraph. For this portion, we will b
 We have implemented the data extraction by using the HuggingFace datasets. From these datasets, we have created train, test, and validation sets. Using the pre-trained BioBERT model, we have trained the model using our test sets with a semi-supervised approach to analyze the model. We calculated the F1 score of the model and deemed it appropriate to continue the rest of implementation. After fine-tuning the model, we used it to run relation extraction on the datasets and find the gene-to-gene interactions and relationships. We then created a knowledge graph utilizing TigerGraph to plot the interactions and relationships we found on the genes. 
 
 #### 5.1.1 Methodology
-We extracted `pubmed` and `pubmed-summarization` from HuggingFace
-Fine-tuned the biobert-v1.1 model available through HuggingFace on the Named-entity Recognition datasets made available by BioBERT [?].
-Used the trained model to predict the gene names in the pubmed dataset
-Pre-processed the data for Relation Extraction by adding tags around gene names we obtained through the named-entity recognition.
+1. We extracted `pubmed` and `pubmed-summarization` from HuggingFace
+2. Fine-tuned the biobert-v1.1 model available through HuggingFace on the Named-entity Recognition datasets made available by BioBERT [?].
+3. Used the trained model to predict the gene names in the pubmed dataset
+4. Pre-processed the data for Relation Extraction by adding tags around gene names we obtained through the named-entity recognition.
+
 > Example of tagging:
 >Like other DPP-4 inhibitors, ENToCHEMoMK sitagliptin KMoCHEMoTNE reduces ENToGENEoMK hemoglobin A1c KMoGENEoTNE (HbA1c), fasting and postprandial glucose by glucose-dependent stimulation of insulin secretion and inhibition of glucagon secretion.	INDIRECT-DOWNREGULATOR
-Fine-tuned the biobert-v1.1 model for Relation Extraction
-Used the relation extraction model on the pre-processed pubmed dataset
-The gene names were used to create nodes and the relations were used to create edges in the Tiger Graph schema
-We plotted the gene-to-gene relationships in TigerGraph and hosted it on TigerCloud.
+
+5. Fine-tuned the biobert-v1.1 model for Relation Extraction
+6. Used the relation extraction model on the pre-processed pubmed dataset
+7. The gene names were used to create nodes and the relations were used to create edges in the Tiger Graph schema
+8. We plotted the gene-to-gene relationships in TigerGraph and hosted it on TigerCloud.
 
 
 ### 5.3 Implementation Problems, Challenges, and Lessons Learned

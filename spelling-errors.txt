@@ -102,7 +102,7 @@ qui
 quis
 reprehenderit
 reprofiling
-Repurposing
+repurposing
 reqs
 scalable
 sed
@@ -112,7 +112,7 @@ sunt
 tempor
 Thinh
 thinhh
-TigerCloud
+Tigercloud
 Tigergraph
 TSQL
 TSV
