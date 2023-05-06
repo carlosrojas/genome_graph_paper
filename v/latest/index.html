@@ -119,8 +119,8 @@
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-06T03:36:16+00:00" />
-  <meta property="article:modified_time" content="2023-05-06T03:36:16+00:00" />
+  <meta name="dc.modified" content="2023-05-06T04:04:18+00:00" />
+  <meta property="article:modified_time" content="2023-05-06T04:04:18+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -141,9 +141,9 @@
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -167,9 +167,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://carlosrojas.github.io/genome_graph_paper/v/f5b01716492c45c459ffdae49ed8e7815374f8a5/">permalink</a>)
+(<a href="https://carlosrojas.github.io/genome_graph_paper/v/f1592b923e7297a5259b85b8f6d076a2281e83c2/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/carlosrojas/genome_graph_paper/tree/f5b01716492c45c459ffdae49ed8e7815374f8a5">carlosrojas/genome_graph_paper@f5b0171</a>
+from <a href="https://github.com/carlosrojas/genome_graph_paper/tree/f1592b923e7297a5259b85b8f6d076a2281e83c2">carlosrojas/genome_graph_paper@f1592b9</a>
 on May 6, 2023.
 </em></small></p>
 <p>Published: February 1, 2023</p>
@@ -512,16 +512,22 @@ GNormPlus: GNormPlus resolves composite gene and protein names using advanced te
 <h3 id="implementation-of-developed-solutions">5.2 Implementation of Developed Solutions</h3>
 <p>We have implemented the data extraction by using the HuggingFace datasets. From these datasets, we have created train, test, and validation sets. Using the pre-trained BioBERT model, we have trained the model using our test sets with a semi-supervised approach to analyze the model. We calculated the F1 score of the model and deemed it appropriate to continue the rest of implementation. After fine-tuning the model, we used it to run relation extraction on the datasets and find the gene-to-gene interactions and relationships. We then created a knowledge graph utilizing TigerGraph to plot the interactions and relationships we found on the genes.</p>
 <h4 id="methodology">5.1.1 Methodology</h4>
-<p>We extracted <code>pubmed</code> and <code>pubmed-summarization</code> from HuggingFace
-Fine-tuned the biobert-v1.1 model available through HuggingFace on the Named-entity Recognition datasets made available by BioBERT [?].
-Used the trained model to predict the gene names in the pubmed dataset
-Pre-processed the data for Relation Extraction by adding tags around gene names we obtained through the named-entity recognition.
-&gt; Example of tagging:
-&gt;Like other DPP-4 inhibitors, ENToCHEMoMK sitagliptin KMoCHEMoTNE reduces ENToGENEoMK hemoglobin A1c KMoGENEoTNE (HbA1c), fasting and postprandial glucose by glucose-dependent stimulation of insulin secretion and inhibition of glucagon secretion. INDIRECT-DOWNREGULATOR
-Fine-tuned the biobert-v1.1 model for Relation Extraction
-Used the relation extraction model on the pre-processed pubmed dataset
-The gene names were used to create nodes and the relations were used to create edges in the Tiger Graph schema
-We plotted the gene-to-gene relationships in TigerGraph and hosted it on TigerCloud.</p>
+<ol type="1">
+<li>We extracted <code>pubmed</code> and <code>pubmed-summarization</code> from HuggingFace</li>
+<li>Fine-tuned the biobert-v1.1 model available through HuggingFace on the Named-entity Recognition datasets made available by BioBERT [?].</li>
+<li>Used the trained model to predict the gene names in the pubmed dataset</li>
+<li>Pre-processed the data for Relation Extraction by adding tags around gene names we obtained through the named-entity recognition.</li>
+</ol>
+<blockquote>
+<p>Example of tagging:
+Like other DPP-4 inhibitors, ENToCHEMoMK sitagliptin KMoCHEMoTNE reduces ENToGENEoMK hemoglobin A1c KMoGENEoTNE (HbA1c), fasting and postprandial glucose by glucose-dependent stimulation of insulin secretion and inhibition of glucagon secretion. INDIRECT-DOWNREGULATOR</p>
+</blockquote>
+<ol start="5" type="1">
+<li>Fine-tuned the biobert-v1.1 model for Relation Extraction</li>
+<li>Used the relation extraction model on the pre-processed pubmed dataset</li>
+<li>The gene names were used to create nodes and the relations were used to create edges in the Tiger Graph schema</li>
+<li>We plotted the gene-to-gene relationships in TigerGraph and hosted it on TigerCloud.</li>
+</ol>
 <h3 id="implementation-problems-challenges-and-lessons-learned">5.3 Implementation Problems, Challenges, and Lessons Learned</h3>
 <h4 id="implementation-problems-and-challenges">Implementation Problems and Challenges</h4>
 <p>The problems and challenges of implementation include having to workaround the potential downtime of the HPC and connecting the output of the name entity recognition with the relation extraction.</p>
@@ -832,7 +838,7 @@ Note that if you want to export to Word (<code>.docx</code>), you need to downlo
 </tbody>
 </table>
 </div>
-<div id="tbl:6dc02f3e-bf51-4c32-bdb7-c73cb55f5706" class="tablenos">
+<div id="tbl:08fce9c4-4b02-4bed-9fae-26520c684d91" class="tablenos">
 <table id="tbl:">
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
