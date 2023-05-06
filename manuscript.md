@@ -25,8 +25,8 @@ header-includes: |
   <meta name="dc.date" content="2023-02-01" />
   <meta name="citation_publication_date" content="2023-02-01" />
   <meta property="article:published_time" content="2023-02-01" />
-  <meta name="dc.modified" content="2023-05-06T01:49:15+00:00" />
-  <meta property="article:modified_time" content="2023-05-06T01:49:15+00:00" />
+  <meta name="dc.modified" content="2023-05-06T02:21:51+00:00" />
+  <meta property="article:modified_time" content="2023-05-06T02:21:51+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -47,9 +47,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://carlosrojas.github.io/genome_graph_paper/" />
   <meta name="citation_pdf_url" content="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://carlosrojas.github.io/genome_graph_paper/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/959c8ad30b1879783c464ddec0ada8cc9e2b91df/" />
-  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/959c8ad30b1879783c464ddec0ada8cc9e2b91df/" />
-  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/959c8ad30b1879783c464ddec0ada8cc9e2b91df/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://carlosrojas.github.io/genome_graph_paper/v/d565c0434a18056549d5751809853258d6e8d0fd/" />
+  <meta name="manubot_html_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d565c0434a18056549d5751809853258d6e8d0fd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://carlosrojas.github.io/genome_graph_paper/v/d565c0434a18056549d5751809853258d6e8d0fd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://carlosrojas.github.io/genome_graph_paper/v/959c8ad30b1879783c464ddec0ada8cc9e2b91df/))
+([permalink](https://carlosrojas.github.io/genome_graph_paper/v/d565c0434a18056549d5751809853258d6e8d0fd/))
 was automatically generated
-from [carlosrojas/genome_graph_paper@959c8ad](https://github.com/carlosrojas/genome_graph_paper/tree/959c8ad30b1879783c464ddec0ada8cc9e2b91df)
+from [carlosrojas/genome_graph_paper@d565c04](https://github.com/carlosrojas/genome_graph_paper/tree/d565c0434a18056549d5751809853258d6e8d0fd)
 on May 6, 2023.
 </em></small>
 

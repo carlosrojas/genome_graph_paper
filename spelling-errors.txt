@@ -10,7 +10,7 @@ Austing
 aute
 aychoronously
 backend
-BioBert
+BioBERT
 BioBERTs
 bioinformatics
 centric
@@ -24,12 +24,12 @@ culpa
 cupidatat
 Dask
 dataset
-datasets
+Datasets
 dbSNP
-deliverables
+Deliverables
 deserunt
 Desireable
-DGIDB
+DGIdb
 differentially
 dolore
 DRKG
@@ -95,7 +95,7 @@ qui
 quis
 reprehenderit
 reprofiling
-Repurposing
+repurposing
 reqs
 scalable
 sed
