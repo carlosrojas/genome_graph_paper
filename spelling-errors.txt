@@ -85,7 +85,7 @@ officia
 Pandoc’s
 pariatur
 PCA
-Pre
+pre
 preprocessing
 proident
 Pubmed’s
@@ -94,7 +94,7 @@ qui
 quis
 reprehenderit
 reprofiling
-Repurposing
+repurposing
 reqs
 scalable
 sed

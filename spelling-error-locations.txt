@@ -219,6 +219,9 @@ content/06.chapter-05.md:22:HuggingFace
 content/06.chapter-05.md:22:pre
 content/06.chapter-05.md:22:TigerGraph
 content/06.chapter-05.md:26:HPC
+content/08.chapter-07.md:5:BioBERT
+content/08.chapter-07.md:5:datasets
+content/08.chapter-07.md:5:datasets
 content/10.delete-me.md:44:adipiscing
 content/10.delete-me.md:44:aliqua
 content/10.delete-me.md:44:amet
