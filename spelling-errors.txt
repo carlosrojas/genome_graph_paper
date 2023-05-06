@@ -24,12 +24,12 @@ culpa
 cupidatat
 Dask
 dataset
-Datasets
+datasets
 dbSNP
 Deliverables
 deserunt
 Desireable
-DGIdb
+DGIDB
 differentially
 dolore
 DRKG
@@ -95,7 +95,7 @@ qui
 quis
 reprehenderit
 reprofiling
-repurposing
+Repurposing
 reqs
 scalable
 sed
@@ -105,11 +105,11 @@ tempor
 Thinh
 thinhh
 TigerCloud
-TigerGraph
+Tigergraph
 TSQL
 TSV
 tuedolm
-TXT
+txt
 ullamco
 UML
 vectorizing
