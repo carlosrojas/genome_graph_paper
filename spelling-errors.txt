@@ -24,12 +24,12 @@ culpa
 cupidatat
 Dask
 dataset
-datasets
+Datasets
 dbSNP
-deliverables
+Deliverables
 deserunt
 Desireable
-DGIdb
+DGIDB
 differentially
 dolore
 DRKG
@@ -103,7 +103,7 @@ sunt
 tempor
 Thinh
 thinhh
-Tigercloud
+TigerCloud
 TigerGraph
 TSQL
 TSV
